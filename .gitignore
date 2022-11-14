@@ -1,7 +1,4 @@
-log/*
-!log/.gitkeep
 log/butler_log/*
-!log/butler_log/.gitkeep
 .venv/
 __pycache__/
 rough.txt
