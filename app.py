@@ -13,7 +13,7 @@ from creds import vm_username, vm_password
 
 # Path for project directory
 basedir = os.path.abspath(os.path.dirname(__file__))
-print(basedir)
+# print(basedir)
 # Log management
 # Create and configure logger
 logging.basicConfig(filename=basedir + "/log/" + "/debug.log", format='%(asctime)s %(message)s', filemode='a')
@@ -91,7 +91,7 @@ Session(app)
 
 # Upload folder to store files
 UPLOAD_FOLDER = basedir + '/log/butler_log/'
-print(UPLOAD_FOLDER)
+# print(UPLOAD_FOLDER)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
@@ -392,6 +392,10 @@ def log_maker(site_name):
         
         arguments = {"pps_id":pps_id, "order_node":order_node, "put_node":put_node, "audit_id":audit_id, "butler_id":butler_id, "taskkey":taskkey}
         print(arguments)
+
+        for argument in arguments:
+            if not arguments[argument]:
+                arguments[argument] = 'null'
         filename = ticket_id + '.log'
         myoutput = open('log/butler_log/' + filename, 'w')
         #make sure logs are deleted later
