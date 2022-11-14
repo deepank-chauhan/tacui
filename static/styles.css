@@ -1,0 +1,350 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+.nav-bg {
+    background-color: #344657;
+}
+
+.nav-text {
+    color: white;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.btn-outline-secondary {
+    color: white !important;
+    background-color: #344657;
+}
+
+.btn-outline-secondary:hover, .btn-outline-secondary:active, .open, .btn-outline-secondary:visited, .btn-outline-secondary:focus, .dropdown-toggle.btn-outline-secondary{
+    background-color: #243647 !important;
+}
+
+/* Custom btn color */
+
+/* .btn-primary custom rule */
+.btn-primary {
+    color: #fff;
+    background-color: #CC7000;
+    border-color: #CC7000;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #915000;
+    border-color: #915000;
+}
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+    color: #fff;
+    background-color: #915000;
+    border-color: #915000;
+    box-shadow: 0 0 0 0.25rem rgba(224, 132, 18, 0.562);
+}
+.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #915000;
+    border-color: #915000;
+}
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.25rem rgba(224, 132, 18, 0.562);
+}
+.btn-primary:disabled, .btn-primary.disabled {
+    color: #fff;
+    background-color: #CC7000;
+    border-color: #CC7000;
+}
+
+/* .btn-outline-primary custom rule */
+.btn-outline-primary {
+    color: #CC7000;
+    border-color: #CC7000;
+  }
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #CC7000;
+    border-color: #CC7000;
+  }
+  .btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.25rem rgba(224, 132, 18, 0.562);
+  }
+  .btn-check:checked + .btn-outline-primary, .btn-check:active + .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show {
+    color: #fff;
+    background-color: #CC7000;
+    border-color: #CC7000;
+  }
+  .btn-check:checked + .btn-outline-primary:focus, .btn-check:active + .btn-outline-primary:focus, .btn-outline-primary:active:focus, .btn-outline-primary.active:focus, .btn-outline-primary.dropdown-toggle.show:focus {
+    box-shadow: 0 0 0 0.25rem rgba(224, 132, 18, 0.562);
+  }
+  .btn-outline-primary:disabled, .btn-outline-primary.disabled {
+    color: #CC7000;
+    background-color: transparent;
+  }
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+.card-heading, .card-title {
+    display: inline;
+}
+
+.card:hover {
+    background-color: #D3D3D3;
+}
+
+.maintenance-page {
+    text-align: left;
+}
+
+.maintenance-page h2 {
+    margin-top: 3%;
+}
+.maintenance-page .btn {
+    margin: 50px 0;
+}
+
+.maintenance-page p, .maintenance-page .timestamp{
+    margin-top: 3%;
+    text-align: left;
+    display: inline;
+    font-size: large;
+}
+
+.home-button {
+    width: 100%;
+}
+
+
+.hide {
+    display: none;
+}
+
+.apology-message {
+    text-align: center;
+}
+
+.container.apology-message {
+    margin: 5% 0;
+}
+
+/* Login */
+.form-control {
+    display: inline-block;
+    width: auto;
+    width: 40%;
+}
+
+.form-group {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.jumbotron {
+    text-align: center;
+    margin: 5%;
+}
+
+.jumbotron .btn {
+    width: 40%;
+}
+
+.btn {
+    margin: 1% 0;
+}
+
+/* For service dropdown */
+.service-tab {
+    width: 100%;
+    height: 60px;
+    text-align: left;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.service-tab li {
+    background-color: #D3D3D3;
+}
+
+.service-status {
+    text-align: right;
+}
+
+.table {
+    margin-top: 5%;
+}
+
+
+/* site-list */
+.site-list {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/* Register */
+.register {
+    margin: 0 0 3% 0;
+}
+
+/* Badges for coming soon message */
+.badge-overlay {
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 100;
+    -webkit-transition: width 1s ease, height 1s ease;
+    -moz-transition: width 1s ease, height 1s ease;
+    -o-transition: width 1s ease, height 1s ease;
+    transition: width 0.4s ease, height 0.4s ease
+}
+
+.badge {
+    margin: 0;
+    padding: 0;
+    color: white;
+    padding: 5px 5px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: normal;
+    text-transform: uppercase;
+    background: #ed1b24;
+}
+
+.badge::before, .badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    margin: 0 -1px;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    min-width: 55px
+}
+
+.badge::before {
+    right: 100%
+}
+
+.badge::after {
+    left: 100%
+}
+
+.middle-full {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    -ms-transform: translateX(0%) translateY(-50%) rotate(0deg);
+    -webkit-transform: translateX(0%) translateY(-50%) rotate(0deg);
+    transform: translateX(0%) translateY(-50%) rotate(0deg);
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: -9px;
+    right: 15px;
+    -ms-transform: translateX(30%) translateY(0%) rotate(-45deg);
+    -webkit-transform: translateX(30%) translateY(0%) rotate(-45deg);
+    transform: translateX(30%) translateY(0%) rotate(-30deg);
+    -ms-transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+
+.bottom-full {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.badge.orange {
+    background: #fa7901;
+}
+
+/* Alert message style */
+.closebtn {
+    margin-left: 15px;
+    color: rgb(1, 1, 1);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.closebtn:hover {
+    color: white;
+}
+
+/* Dropdown arrow */
+.dropdown-arrow {
+    position: relative;
+}
+  
+.dropdown-arrow:before {
+    content: "";
+    position: absolute;
+    left: 37%;
+    top: 15px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #505050;
+}
+  

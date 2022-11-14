@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+  <div class="jumbotron">
+    
+    <h2 class="register">Register</h2>
+    <form action="/register/site" method="get">
+      <button class="btn btn-primary">Register a new site</button>
+    </form>  
+    <form action="/register/user" method="get">
+      <button class="btn btn-primary">Register a new user</button>
+    </form>
+  </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sites
+{% endblock %}
+
+{% block main %}
+<div class="container site-list">
+    <h1 style="margin: 2% 0 3% 0;text-align:center">Ranger Sites</h1>
+    <div class="row">
+        {% for site in sites %}
+        <div class="col-md-4">
+            <div class="card" style="width: 20rem; margin: 3%;">
+                <div onclick="location.href='/{{ site.site_alias }}';" style="cursor: pointer;" class="card-body">
+                <h1 class="card-title"> {{ site.sitename }}</h1>
+                <!-- <p class="card-text">Last Maintenance was done on: {{ site.last_maintenance_timestamp }}</p> -->  
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

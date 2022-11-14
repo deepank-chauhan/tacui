@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Log Maker
+{% endblock title %}
+
+{% block main %}
+    <div style="margin-top: 2%" class="container">
+        <h1 style="margin: 2% 0 3% 0;text-align:center">{{ site.sitename }}</h1>
+        <form action="/{{ site.site_alias }}/log-maker" method="post">
+        <h3  class="register">Capture Logs</h3>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="ticket_id" placeholder="Ticket id" type="text" required>
+        </div>
+        <div class="form-group dropdown-arrow">
+            <div class="form-group">
+              <select onchange="formOptions(this.value)" class="form-control" name="issue_type" id="issue_type" style="color:#707070;">
+                <option value="none" selected disabled hidden>Issue Type</option>
+                <option value="Audit">Audit</option>
+                <option value="GMC">GMC</option>
+                <option value="Pick">Pick</option>
+                <option value="Platform">Platform</option>
+                <option value="Put">Put</option>
+              </select>
+            </div>
+        </div>
+
+        <div id="formDiv">
+
+        </div>
+        
+        <button class="btn btn-primary">Download Logs</button>
+        </form>
+    </div>
+
+    <script>
+        function validate(evt) {
+            var theEvent = evt || window.event;
+          
+            // Handle paste
+            if (theEvent.type === 'paste') {
+                key = event.clipboardData.getData('text/plain');
+            } else {
+            // Handle key press
+                var key = theEvent.keyCode || theEvent.which;
+                key = String.fromCharCode(key);
+            }
+            var regex = /[0-9]/;
+            if( !regex.test(key) ) {
+              theEvent.returnValue = false;
+              if(theEvent.preventDefault) theEvent.preventDefault();
+            }
+        }
+
+        function formOptions(issue_type) {
+            if (issue_type == "")
+                return;
+            
+            console.log(issue_type);
+            var ajax = new XMLHttpRequest();
+
+            ajax.onreadystatechange = function() {
+                if (ajax.readyState == 4 && ajax.status == 200) {
+                   $('#formDiv').html(ajax.responseText);
+                }
+            };
+            
+            ajax.open('GET', '/' + issue_type, true);
+            ajax.send();
+        }
+    </script>
+{% endblock main %}

@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    SBS: Mode Conversion
+{% endblock title %}
+
+{% block main %}
+<div style="margin-top: 2%" class="container">
+    <form action="/sbs/mode-conversion" method="post">
+    <h3  class="register">Mode Conversion</h3>
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="pps_id" placeholder="PPS Id" type="text">
+    </div>
+    <div class="form-group">
+        <input onchange="formOptions(this.value)" autocomplete="off" autofocus class="form-control" list="mode_type" name="mode_type" placeholder="Mode Type" type="text">
+        <datalist id="mode_type">
+            <option value="STORE_EACHES">
+            <option value="STORE_BIN">
+            <option value="CUSTOMER_BIN">
+        </datalist>
+    
+    <div class="div form-group">
+        <button class="btn btn-primary">Change Mode</button>
+    </div>
+
+    <div>
+        {% if logs is defined and logs|length > 0 %}
+        <pre style="background-color: #D3D3D3; padding: 1%">{{ logs }}</pre>
+        {% endif %}
+    </div>
+</div>
+{% endblock main %}
