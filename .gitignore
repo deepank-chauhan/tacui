@@ -1,4 +1,5 @@
-*.log
+log/*
+!log/.gitkeep
 .venv/
 __pycache__/
 rough.txt
