@@ -317,6 +317,47 @@ def login():
     else:
         return render_template("login.html")
 
+# User Profile
+@app.route('/profile', methods = ['GET', 'POST'])
+def profile():
+
+    # User reached out via POST
+    if request.method == "POST":
+
+        password = request.form.get("password")
+        confirmation = request.form.get("confirmation")
+
+        print(password)
+        print(confirmation)
+
+        if not password:
+            flash("must provide password")
+            return redirect('/profile')
+
+        elif not confirmation:
+            flash("must repeat password")
+            return redirect('/profile')
+
+        # Matching password
+        if password != confirmation:
+            flash("password didn't match")
+            return redirect('/profile')
+
+        # Hashing the password
+        password_hash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
+        print(session['user_id'])
+        # db.engine.execute("UPDATE users set password = %s where username = %s;", password_hash, session["user_id"])
+        User.query.filter_by(username=session['user_id']).update(dict(password=password_hash))
+        db.session.commit()
+
+        # Success message
+        flash("Password updated!")
+
+        return redirect('/profile')
+
+    else:
+
+        return render_template('profile.html')
 
 # Homepage
 @app.route("/", methods = ['GET', 'POST'])

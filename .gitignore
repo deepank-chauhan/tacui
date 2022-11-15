@@ -1,3 +1,4 @@
+log/*.log
 log/butler_log/*
 .venv/
 __pycache__/
